@@ -1,26 +1,29 @@
+
 @font-face {
 	font-family: 'Gilroy ExtraBold';
 	src: url('./gilroy/Gilroy-ExtraBold.ttf') format('truetype');
 }
+
 @font-face {
 	font-family: 'Gilroy Light';
 	src: url('./gilroy/Gilroy-Light.ttf') format('truetype');
 }
 
 
-.doctor_section body {
+body .doctor_section {
     font-family: 'Gilroy Light', sans-serif;
     font-weight: normal;
     color: #1F3960;
     background-color: #E7F6FF;
+    padding: 20px;
 }
 
-.doctor_section body p {
+body .doctor_section p {
     font-size: 18px;
     line-height: 1.4;
 }
 
-.doctor_section {
+section.doctor_section {
     max-width: 840px;
 }
 .doctor_section h2 {
@@ -89,12 +92,12 @@
     padding: 10px 20px;
     margin-top: 40px;
 }
-.doc_experience > p {
+.doctor_section .doc_experience > p {
     font-size: 40px;
     margin: 0 0 5px;
     font-weight: 600;
 }
-span.age {
+.doctor_section span.age {
     font-size: 22px;
 }
 .doc_experience span {
@@ -166,7 +169,7 @@ span.age {
     border-radius: 10px;
     background: orange;
 }
-.services_info p {
+.doctor_section .services_info p {
     font-size: 24px;
     font-weight: 600;
 }
@@ -231,7 +234,7 @@ span.age {
     background: linear-gradient(135deg, #ACE6FF, #7CD7FE);
     text-align: center;
 }
-.dop_services_card p {
+.doctor_section .dop_services_card p {
     font-size: 28px;
     margin: 0;
     font-weight: 600;
