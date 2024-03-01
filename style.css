@@ -1,49 +1,33 @@
-/* Estra Bold */
-/*@font-face {
-	font-family: 'Gilroy ExtraBold';
-		src: url('/gilroy/Gilroy-ExtraBold.ttf') format('truetype');
-		font-weight: normal;
-		font-style: normal;
-}*/
-/* Light */
-/*@font-face {
-	font-family: 'Gilroy Light';
-		src: url('/gilroy/Gilroy-Light.ttf') format('truetype');
-		font-weight: normal;
-		font-style: normal;
-}
-*/
 @font-face {
 	font-family: 'Gilroy ExtraBold';
 	src: url('./gilroy/Gilroy-ExtraBold.ttf') format('truetype');
 }
-
 @font-face {
 	font-family: 'Gilroy Light';
 	src: url('./gilroy/Gilroy-Light.ttf') format('truetype');
 }
 
 
-body {
+.doctor_section body {
     font-family: 'Gilroy Light', sans-serif;
     font-weight: normal;
     color: #1F3960;
     background-color: #E7F6FF;
 }
 
-body p {
+.doctor_section body p {
     font-size: 18px;
     line-height: 1.4;
 }
 
-section.doctor_section {
+.doctor_section {
     max-width: 840px;
 }
-h2 {
+.doctor_section h2 {
     font-family: 'Gilroy ExtraBold', sans-serif;
     font-size: 32px;
 }
-h3 {
+.doctor_section h3 {
     font-family: 'Gilroy Light', sans-serif;
     font-weight: 600;
     font-size: 30px;
