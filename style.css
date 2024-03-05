@@ -50,7 +50,11 @@ section.doctor_section {
     width: 100%;
     max-width: 340px;
     height: 480px;
-    background: orange;
+    background-size: cover;
+    border-radius: 20px;
+}
+.doctor_important_info img {
+    max-width: 340px;
     border-radius: 20px;
 }
 .doc_info > p {
@@ -167,7 +171,7 @@ section.doctor_section {
     max-width: 435px;
     height: 200px;
     border-radius: 10px;
-    background: orange;
+    background-size: cover;
 }
 .doctor_section .services_info p {
     font-size: 24px;
@@ -252,6 +256,14 @@ section.doctor_section {
 .dop_services_price span {
     font-size: 13px;
     text-transform: uppercase;
+}
+
+/*Слайдер До и После*/
+.doc_work_gallery {
+    text-align: center;
+}
+.doc_work_gallery img {
+    width: 300px;
 }
 
 /*Локация*/
