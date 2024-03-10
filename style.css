@@ -108,6 +108,71 @@ section.doctor_section {
     font-size: 14px;
 }
 
+/*Фотографии кабинета, галерея врача*/
+.doc_gallery {
+    margin: 30px 0;
+}
+ .block_img {
+    width: 840px;
+    max-width: 100%;
+    display: flex;
+    gap: 10px;
+ }
+ .block_img .card {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+ }
+ .block_img .pair_column {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+ .kab-1 {
+ }
+ .block_img .card img {
+    border-radius: 10px;
+    width: 100%;
+ }
+ .block_img .pair_row {
+    display: flex;
+    gap: 10px;
+ }
+ .block_img .pair_row img {
+ }
+ .block_img .kab-4 {
+    width: 350px;
+ }
+ 
+ @media (min-width: 768px) {
+    .block_img_small {
+       display: none;
+    }
+ }
+ @media (max-width: 768px) {
+    .block_img {
+       display: none;
+    }
+    .block_img_small {
+       /*width: max(768px, 100%);*/
+       display: flex;
+       gap: 10px;
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+    .pair {
+       display: flex;
+       gap: 10px;
+    }
+    .block_img_small .card img {
+       border-radius: 10px;
+       width: clamp(145px, 45vw, 360px);
+       height: clamp(145px, 45vw, 360px);
+    }
+ }
+
 /*Аккордеон*/
 .accordion_item {
     display: flex;
