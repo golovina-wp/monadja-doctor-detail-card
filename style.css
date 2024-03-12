@@ -112,66 +112,66 @@ section.doctor_section {
 .doc_gallery {
     margin: 30px 0;
 }
- .block_img {
+.block_img {
     width: 840px;
     max-width: 100%;
     display: flex;
     gap: 10px;
- }
- .block_img .card {
+}
+.block_img .card {
     overflow: hidden;
     width: 100%;
     display: flex;
- }
- .block_img .pair_column {
+}
+.block_img .pair_column {
     width: 480px;
     display: flex;
     flex-direction: column;
     gap: 10px;
- }
- .kab-1 {
- }
- .block_img .card img {
+}
+.kab-1 {
+}
+.block_img .card img {
     border-radius: 10px;
     width: 100%;
- }
- .block_img .pair_row {
+}
+.block_img .pair_row {
     display: flex;
     gap: 10px;
- }
- .block_img .pair_row img {
- }
- .block_img .kab-4 {
+}
+.block_img .pair_row img {
+}
+.block_img .kab-4 {
     width: 350px;
- }
- 
- @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
     .block_img_small {
-       display: none;
+        display: none;
     }
- }
- @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
     .block_img {
-       display: none;
+        display: none;
     }
     .block_img_small {
-       /*width: max(768px, 100%);*/
-       display: flex;
-       gap: 10px;
-       flex-direction: row;
-       flex-wrap: wrap;
-       justify-content: center;
+        /*width: max(768px, 100%);*/
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .pair {
-       display: flex;
-       gap: 10px;
+        display: flex;
+        gap: 10px;
     }
     .block_img_small .card img {
-       border-radius: 10px;
-       width: clamp(145px, 45vw, 360px);
-       height: clamp(145px, 45vw, 360px);
+        border-radius: 10px;
+        width: clamp(145px, 45vw, 360px);
+        height: clamp(145px, 45vw, 360px);
     }
- }
+}
 
 /*Аккордеон*/
 .accordion_item {
@@ -223,6 +223,180 @@ section.doctor_section {
 }
 .acor_text p {
     margin: 20px 0 0;
+}
+
+/*Слайдер сертификатов*/
+.doc_certificates {
+    display: grid;
+}
+.article {
+    display: grid;
+    max-width: 780px;
+    margin: 0 auto;
+}
+label {
+    cursor: pointer;
+}
+input {
+    display: none;
+}
+#slide1:checked ~ #slides .inner {
+    margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+#slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+}
+#slide5:checked ~ #slides .inner {
+    margin-left: -400%;
+}
+#container {
+    width: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.article img {
+    width: 100%;
+    max-width: 500px;
+}
+#slides .inner {
+    width: 500%;
+    line-height: 0;
+}
+#slides .article {
+    width: 20%;
+    float: left;
+}
+#commands {
+    margin: -45% 0 0 0;
+    width: 100%;
+    height: 50px;
+}
+#commands label {
+    display: none;
+    width: 80px;
+    height: 50px;
+    opacity: 0.5;
+}
+#commands label:hover {
+    opacity: 0.8;
+}
+#slide1:checked ~ #commands label:nth-child(2),
+#slide2:checked ~ #commands label:nth-child(3),
+#slide3:checked ~ #commands label:nth-child(4),
+#slide4:checked ~ #commands label:nth-child(5),
+#slide5:checked ~ #commands label:nth-child(1) {
+    background: url("https://0.s3.envato.com/files/84450220/img/next.png")
+    no-repeat;
+    float: right;
+    margin: 0 60px 0 0;
+    display: block;
+}
+#slide1:checked ~ #commands label:nth-child(5),
+#slide2:checked ~ #commands label:nth-child(1),
+#slide3:checked ~ #commands label:nth-child(2),
+#slide4:checked ~ #commands label:nth-child(3),
+#slide5:checked ~ #commands label:nth-child(4) {
+    background: url("https://0.s3.envato.com/files/84450220/img/previous.png")
+    no-repeat;
+    float: left;
+    margin: 0 0 0 60px;
+    display: block;
+}
+#slides {
+    position: relative;
+    margin: 45px 0 0;
+}
+#slides .inner {
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+    -ms-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    -ms-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+#commands label {
+    -webkit-transform: translateZ(0);
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+#slide1:checked ~ #slides .article:nth-child(1) .caption,
+#slide2:checked ~ #slides .article:nth-child(2) .caption,
+#slide3:checked ~ #slides .article:nth-child(3) .caption,
+#slide4:checked ~ #slides .article:nth-child(4) .caption,
+#slide5:checked ~ #slides .article:nth-child(5) .caption {
+    opacity: 1;
+    -webkit-transition: all 1s ease-out 0.6s;
+    -moz-transition: all 1s ease-out 0.6s;
+    -o-transition: all 1s ease-out 0.6s;
+    transition: all 1s ease-out 0.6s;
+}
+@media only screen and (min-width: 450px) {
+    #slider #commands {
+        margin: -45% 0 0 0;
+        width: 100%;
+        height: 50px;
+    }
+    #slider #commands label {
+        -moz-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    #slider #slides {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+}
+@media only screen and (max-width: 450px) {
+    /*#slider #commands {
+        margin: 0;
+        width: 100%;
+        height: 50px;
+        bottom: 55%;
+        position: relative;
+    }*/
+    #slider #slides {
+        padding: 2px 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+    #slider #commands label {
+        -moz-transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+    #slide1:checked ~ #commands label:nth-child(2),
+    #slide2:checked ~ #commands label:nth-child(3),
+    #slide3:checked ~ #commands label:nth-child(4),
+    #slide4:checked ~ #commands label:nth-child(5),
+    #slide5:checked ~ #commands label:nth-child(1) {
+        margin: 0;
+    }
+    #slide1:checked ~ #commands label:nth-child(5),
+    #slide2:checked ~ #commands label:nth-child(1),
+    #slide3:checked ~ #commands label:nth-child(2),
+    #slide4:checked ~ #commands label:nth-child(3),
+    #slide5:checked ~ #commands label:nth-child(4) {
+        margin: 0;
+    }
 }
 
 /*Список услуг врача*/
@@ -359,4 +533,3 @@ section.doctor_section {
     color: #2E8DD1;
     transition: .2s;
 }
-
