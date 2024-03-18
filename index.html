@@ -254,42 +254,53 @@
 
     <div class="doc_work_gallery"> <!-- Фото работ врача, До-После / Слайдер, галерея -->
         <h3>Галерея работ</h3>
-        <div class="article" id="dwslider">
-           <input checked type='radio' name='slider' id='slide6' />
-           <input type='radio' name='slider' id='slide7' />
-           <input type='radio' name='slider' id='slide8' />
-           <input type='radio' name='slider' id='slide9' />
-           <input type='radio' name='slider' id='slide10' />
-           <div id="dwslides">
-              <div id="dwcontainer">
-                 <div class="inner">
-                    <div class="article">
-                       <img src="./img/work.jpg" />
-                    </div>
-                    <div class="article">
-                       <img src="./img/w-1-1.jpg" />
-                    </div>
-                    <div class="article">
-                       <img src="./img/w-2-2.jpg" />
-                    </div>
-                    <div class="article">
-                       <img src="./img/work.jpg" />
-                    </div>
-                    <div class="article">
-                       <img src="./img/w-2-2.jpg" />
-                    </div>
-                 </div>
-              </div>
-           </div>
-           <div id="dwcommands">
-              <label for='slide6'></label>
-              <label for='slide7'></label>
-              <label for='slide8'></label>
-              <label for='slide9'></label>
-              <label for='slide10'></label>
-           </div>
-        </div>
-     </div>
+        <div class="dwslider">
+            <button id="prev">&#10094;</button>
+         
+            <div class="slider">
+               <div class="slide">
+                  <img src="./img/work.jpg">
+               </div>
+               <div class="slide">
+                  <img src="./img/w-1-1.jpg">
+               </div>
+               <div class="slide">
+                  <img src="./img/w-2-2.jpg">
+               </div>
+            </div>
+         
+            <button id="next">&#10095;</button>
+         </div>
+         <script>
+            const prevButton = document.getElementById("prev");
+            const nextButton = document.getElementById("next");
+            const slider = document.querySelector(".slider");
+            const slides = document.getElementsByClassName("slide");
+            let currentSlide = 0;
+
+            function showSlide(index) {
+            for (let slide of slides) {
+                slide.style.display = "none";
+            }
+            slides[index].style.display = "block";
+            }
+
+            function goToNextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+            }
+
+            function goToPrevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+            }
+
+            prevButton.addEventListener("click", goToPrevSlide);
+            nextButton.addEventListener("click", goToNextSlide);
+
+            showSlide(currentSlide);
+         </script>
+    </div>
 
     <div class="doc_reviews"> <!--УТОЧНИТЬ ВИД ОТЗЫВОВ (фото, скрин или текст)-->
         <h3>Отзывы </h3>
