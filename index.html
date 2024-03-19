@@ -302,9 +302,87 @@
          </script>
     </div>
 
-    <div class="doc_reviews"> <!--УТОЧНИТЬ ВИД ОТЗЫВОВ (фото, скрин или текст)-->
+    <div class="doc_reviews"> <!-- Отзывы о работе врача / Слайдер, галерея --> <!--УТОЧНИТЬ ВИД ОТЗЫВОВ (фото, скрин или текст)-->
         <h3>Отзывы </h3>
-        <!-- Отзывы о работе врача / Слайдер, галерея -->
+        <div class="slider-container">
+            <div class="slider">
+            <div class="slide-box">
+                <!-- Testi One -->
+                <div class="rew_title">
+                    <h3 class="name">Марина</h3>
+                    <div class="rating">
+                        <span>оценка:</span>
+                        <h4 class="number">Отлично</h4>
+                    </div>
+                </div>
+                <p class="comment">
+                    Сдавали ПРЦ тест в филиале по ул. Мелик-Карамова 76 В. Доброжелательный и вежливый мед. персонал, все очень быстро и качественно. Результат получили даже раньше заявленного срока. Спасибо огромное.
+                </p>
+            </div>
+            <div class="slide-box">
+                <!-- Testi Two -->
+                <div class="rew_title">
+                    <h3 class="name">Lorem</h3>
+                    <div class="rating">
+                        <span>оценка:</span>
+                        <h4 class="number">Отлично</h4>
+                    </div>
+                </div>
+                <p class="comment">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="slide-box">
+                <!-- Testi Three -->
+                <div class="rew_title">
+                    <h3 class="name">Lorem</h3>
+                    <div class="rating">
+                        <span>оценка:</span>
+                        <h4 class="number">Отлично</h4>
+                    </div>
+                </div>
+                <p class="comment">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </p>
+            </div>
+            </div>
+        
+            <a href="#!" class="control-slider btn-left">&#10094;</a>
+            <a href="#!" class="control-slider btn-right">&#10095;</a>
+        </div>
+        <script>
+            const sliderElm = document.querySelector(".slider-container .slider");
+            const btnLeft = document.querySelector(".slider-container .btn-left");
+            const btnRight = document.querySelector(".slider-container .btn-right");
+
+            const numberSliderBoxs = sliderElm.children.length;
+            let idxCurrentSlide = 0;
+
+            // Functions:
+            function moveSlider() {
+            let leftMargin =
+                (sliderElm.clientWidth / numberSliderBoxs) * idxCurrentSlide;
+            sliderElm.style.marginLeft = -leftMargin + "px";
+            console.log(sliderElm.clientWidth, leftMargin);
+            }
+            function moveLeft() {
+            if (idxCurrentSlide === 0) idxCurrentSlide = numberSliderBoxs - 1;
+            else idxCurrentSlide--;
+
+            moveSlider();
+            }
+            function moveRight() {
+            if (idxCurrentSlide === numberSliderBoxs - 1) idxCurrentSlide = 0;
+            else idxCurrentSlide++;
+
+            moveSlider();
+            }
+
+            // Event Listeners:
+            btnLeft.addEventListener("click", moveLeft);
+            btnRight.addEventListener("click", moveRight);
+            window.addEventListener("resize", moveSlider);
+        </script>
     </div>
 
     <div class="doc_location"> <!-- УТОЧНИТЬ, НУЖЕН ЛИ САМ БЛОК В ЦЕЛОМ? -->

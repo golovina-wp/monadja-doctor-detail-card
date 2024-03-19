@@ -529,6 +529,76 @@ input {
     font-size: 1.5em;
     border-radius: 50%;
 }
+
+/*Слайдер отзывы*/
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    width: clamp(300px, 100%, 600px);
+    margin: 30px auto;
+}
+.slider {
+    display: flex;
+    width: 300%; /* Depends On slide-box Length * 100 */
+    transition: all 0.5s linear;
+}
+.slide-box {
+    margin: 0 80px;
+    background: linear-gradient(230deg, #47b8e9, #83d4f6);
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+}
+.slide-box .rew_title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.slide-box .rating {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+.slide-box .comment {
+    color: #1f3960;
+    font-size: 16px;
+    position: relative;
+    font-weight: 400;
+    width: clamp(200px, 100%, 380px);
+    margin: 20px 0 0;
+}
+.slide-box .name {
+    font-size: 26px;
+    color: #1f3960;
+    margin: 0;
+}
+.slide-box .number {
+    font-size: 15px;
+    color: #1f3960;
+    font-weight: 600;
+    margin: 0;
+}
+
+.control-slider {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #2e8dd1;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+}
+.btn-left {
+    left: 10px;
+}
+.btn-right {
+    right: 10px;
+}
  
 
 /*Локация*/
