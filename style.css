@@ -42,20 +42,26 @@ section.doctor_section {
 /*Важная информация о враче*/
 .doctor_important_info {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    gap: 20px;
     max-width: 840px;
 }
 .doctor_important_info picture {
-    width: 100%;
+    /*width: 100%;
     max-width: 340px;
-    height: 480px;
     background-size: cover;
-    border-radius: 20px;
+    border-radius: 20px;*/
 }
 .doctor_important_info img {
+    width: 100%;
     max-width: 340px;
     border-radius: 20px;
+}
+.doc_info {
+    width: 100%;
+    max-width: 350px;
 }
 .doc_info > p {
     font-weight: 600;
@@ -68,6 +74,8 @@ section.doctor_section {
     line-height: 1.5;
 }
 .doc_info button {
+    width: 220px;
+    text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,7 +102,7 @@ section.doctor_section {
     background: #fff;
     border-radius: 10px;
     padding: 10px 20px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 .doctor_section .doc_experience > p {
     font-size: 40px;
@@ -169,10 +177,10 @@ section.doctor_section {
     .block_img_small .card img {
         border-radius: 10px;
         width: clamp(145px, 45vw, 360px);
-        height: clamp(145px, 45vw, 360px);
+        height: clamp(100px, 45vw, 280px);
     }
 }
-
+ 
 /*Аккордеон*/
 .accordion_item {
     display: flex;
@@ -462,9 +470,8 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 350px;
     height: 320px;
-    width: 100%;
+    width: clamp(300px, 35dvh, 350px);
     padding: 20px;
     border-radius: 20px;
     background: linear-gradient(135deg, #ACE6FF, #7CD7FE);
@@ -602,9 +609,12 @@ input {
  
 
 /*Локация*/
+
 .location_map iframe {
     border: none;
     border-radius: 20px;
+    max-width: 840px;
+    width: 100%;
 }
 .location_info {
     display: flex;

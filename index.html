@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Карточка врача | Monadja</title>
     <link rel="stylesheet" href="style.css">
+    <script async src="script.js"></script>
 </head>
 <body>
     
 <section class="doctor_section"> <!-- Детальная карточка врача -->
     <div class="doctor_important_info"> <!-- Важная информация о враче / Верхний блок -->
-        <picture style="background-image: url(./img/doctor.jpg);"> <!-- Фото врача / Левый блок -->
+        <picture> <!-- Фото врача / Левый блок -->
+            <img src="./img/doctor.jpg">
         </picture>
         <div class="doc_info"><!-- Информация о враче / Правый блок -->
             <h2>Шпичка Алексей Васильевич</h2>
@@ -35,7 +37,7 @@
                     <div class="card kab-3"><img src="./img/kab-3.jpg"></div>
                 </div>
             </div>
-            <div class="card kab-4"><img src="./img/kab-4.jpg"></div>
+            <div class="card kab-4" style="background: url(./img/kab-4.jpg) center center; background-size: cover; border-radius: 10px;"><!--<img src="./img/kab-4.jpg">--></div>
         </div>
     
         <div class="block_img_small">
@@ -230,7 +232,7 @@
                 <p>Название дополнительной услуги</p>
                 <div class="dop_services_price">
                     <span>Стоимость услуги</span>
-                    <p>3 000 руб.</p>
+                    <p>4 000 руб.</p>
                 </div>
             </div> <!-- Карточка дополнительной услуги -->
 
@@ -238,7 +240,7 @@
                 <p>Название дополнительной услуги</p>
                 <div class="dop_services_price">
                     <span>Стоимость услуги</span>
-                    <p>3 000 руб.</p>
+                    <p>2 000 руб.</p>
                 </div>
             </div> <!-- Карточка дополнительной услуги -->
 
@@ -246,7 +248,7 @@
                 <p>Название дополнительной услуги</p>
                 <div class="dop_services_price">
                     <span>Стоимость услуги</span>
-                    <p>3 000 руб.</p>
+                    <p>5 000 руб.</p>
                 </div>
             </div> <!-- Карточка дополнительной услуги -->
         </div>
@@ -258,20 +260,20 @@
             <button id="prev">&#10094;</button>
          
             <div class="slider">
-               <div class="slide">
-                  <img src="./img/work.jpg">
-               </div>
-               <div class="slide">
-                  <img src="./img/w-1-1.jpg">
-               </div>
-               <div class="slide">
-                  <img src="./img/w-2-2.jpg">
-               </div>
+                <div class="slide">
+                    <img src="./img/work.jpg">
+                </div>
+                <div class="slide">
+                    <img src="./img/w-1-1.jpg">
+                </div>
+                <div class="slide">
+                    <img src="./img/w-2-2.jpg">
+                </div>
             </div>
          
             <button id="next">&#10095;</button>
-         </div>
-         <script>
+        </div>
+        <!--<script>
             const prevButton = document.getElementById("prev");
             const nextButton = document.getElementById("next");
             const slider = document.querySelector(".slider");
@@ -299,7 +301,7 @@
             nextButton.addEventListener("click", goToNextSlide);
 
             showSlide(currentSlide);
-         </script>
+        </script>-->
     </div>
 
     <div class="doc_reviews"> <!-- Отзывы о работе врача / Слайдер, галерея --> <!--УТОЧНИТЬ ВИД ОТЗЫВОВ (фото, скрин или текст)-->
@@ -350,7 +352,7 @@
             <a href="#!" class="control-slider btn-left" style="text-decoration: none;">&#10094;</a>
             <a href="#!" class="control-slider btn-right" style="text-decoration: none;">&#10095;</a>
         </div>
-        <script>
+        <!--<script>
             const sliderElm = document.querySelector(".slider-container .slider");
             const btnLeft = document.querySelector(".slider-container .btn-left");
             const btnRight = document.querySelector(".slider-container .btn-right");
@@ -382,7 +384,7 @@
             btnLeft.addEventListener("click", moveLeft);
             btnRight.addEventListener("click", moveRight);
             window.addEventListener("resize", moveSlider);
-        </script>
+        </script>-->
     </div>
 
     <div class="doc_location"> <!-- УТОЧНИТЬ, НУЖЕН ЛИ САМ БЛОК В ЦЕЛОМ? -->
