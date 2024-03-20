@@ -41,27 +41,25 @@ section.doctor_section {
 
 /*Важная информация о враче*/
 .doctor_important_info {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    display: grid;
     gap: 20px;
     max-width: 840px;
+    align-items: start;
+    grid-auto-flow: column;
 }
-.doctor_important_info picture {
-    /*width: 100%;
-    max-width: 340px;
-    background-size: cover;
-    border-radius: 20px;*/
-}
+.doctor_important_info picture {}
 .doctor_important_info img {
-    width: 100%;
-    max-width: 340px;
     border-radius: 20px;
+    /* width: 290px; */
+    height: 500px;
 }
 .doc_info {
-    width: 100%;
-    max-width: 350px;
+    display: grid;
+    min-width: 260px;
+    max-width: 550px;
+}
+.doc_info > h2 {
+    margin: 0;
 }
 .doc_info > p {
     font-weight: 600;
@@ -98,10 +96,10 @@ section.doctor_section {
     cursor: pointer;
 }
 .doc_experience {
-    width: max-content;
+    width: 240px;
     background: #fff;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 10px;
     margin-top: 10px;
 }
 .doctor_section .doc_experience > p {
@@ -153,34 +151,6 @@ section.doctor_section {
     width: 350px;
 }
 
-@media (min-width: 768px) {
-    .block_img_small {
-        display: none;
-    }
-}
-@media (max-width: 768px) {
-    .block_img {
-        display: none;
-    }
-    .block_img_small {
-        /*width: max(768px, 100%);*/
-        display: flex;
-        gap: 10px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .pair {
-        display: flex;
-        gap: 10px;
-    }
-    .block_img_small .card img {
-        border-radius: 10px;
-        width: clamp(145px, 45vw, 360px);
-        height: clamp(100px, 45vw, 280px);
-    }
-}
- 
 /*Аккордеон*/
 .accordion_item {
     display: flex;
@@ -350,54 +320,6 @@ input {
     -moz-transition: all 1s ease-out 0.6s;
     -o-transition: all 1s ease-out 0.6s;
     transition: all 1s ease-out 0.6s;
-}
-@media only screen and (min-width: 450px) {
-    #slider #commands {
-        margin: -45% 0 0 0;
-        width: 100%;
-        height: 50px;
-    }
-    #slider #commands label {
-        -moz-transform: scale(0.9);
-        -webkit-transform: scale(0.9);
-        -o-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        transform: scale(0.9);
-    }
-    #slider #slides {
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-    }
-}
-@media only screen and (max-width: 450px) {
-    #slider #slides {
-        padding: 2px 0;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-    }
-    #slider #commands label {
-        -moz-transform: scale(0.7);
-        -webkit-transform: scale(0.7);
-        -o-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-        transform: scale(0.7);
-    }
-    #slide1:checked ~ #commands label:nth-child(2),
-    #slide2:checked ~ #commands label:nth-child(3),
-    #slide3:checked ~ #commands label:nth-child(4),
-    #slide4:checked ~ #commands label:nth-child(5),
-    #slide5:checked ~ #commands label:nth-child(1) {
-        margin: 0;
-    }
-    #slide1:checked ~ #commands label:nth-child(5),
-    #slide2:checked ~ #commands label:nth-child(1),
-    #slide3:checked ~ #commands label:nth-child(2),
-    #slide4:checked ~ #commands label:nth-child(3),
-    #slide5:checked ~ #commands label:nth-child(4) {
-        margin: 0;
-    }
 }
 
 /*Список услуг врача*/
@@ -606,7 +528,7 @@ input {
 .btn-right {
     right: 10px;
 }
- 
+
 
 /*Локация*/
 
