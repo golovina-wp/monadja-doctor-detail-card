@@ -451,8 +451,8 @@ input {
     background: #2e8dd1;
     color: #fff;
     border: none;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
@@ -531,7 +531,6 @@ input {
 
 
 /*Локация*/
-
 .location_map iframe {
     border: none;
     border-radius: 20px;
@@ -541,6 +540,9 @@ input {
 .location_info {
     display: flex;
     justify-content: space-between;
+}
+.location_info_small {
+    display: none;
 }
 .location_adress span, .location_phone span {
     font-size: 26px;

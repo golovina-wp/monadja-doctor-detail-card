@@ -219,7 +219,7 @@
     </div> <!-- Вопросы врачу и его ответы / Аккордеон -->
 
     <div class="doc_dop_services"> <!-- Список дополнительных услуг врача / Флекс блоки -->
-        <h3>Перед приемом не забудьте пройти:</h3>
+        <h3>Перед приёмом не&nbsp;забудьте пройти:</h3>
         <div class="dop_services_block">
             <div class="dop_services_card"> <!-- Карточка дополнительной услуги -->
                 <p>Название дополнительной услуги</p>
@@ -259,7 +259,7 @@
         <h3>Галерея работ</h3>
         <div class="dwslider">
             <button id="prev">&#10094;</button>
-         
+        
             <div class="slider">
                 <div class="slide">
                     <img src="./img/work.jpg">
@@ -271,38 +271,9 @@
                     <img src="./img/w-2-2.jpg">
                 </div>
             </div>
-         
+        
             <button id="next">&#10095;</button>
         </div>
-        <!--<script>
-            const prevButton = document.getElementById("prev");
-            const nextButton = document.getElementById("next");
-            const slider = document.querySelector(".slider");
-            const slides = document.getElementsByClassName("slide");
-            let currentSlide = 0;
-
-            function showSlide(index) {
-            for (let slide of slides) {
-                slide.style.display = "none";
-            }
-            slides[index].style.display = "block";
-            }
-
-            function goToNextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-            }
-
-            function goToPrevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-            }
-
-            prevButton.addEventListener("click", goToPrevSlide);
-            nextButton.addEventListener("click", goToNextSlide);
-
-            showSlide(currentSlide);
-        </script>-->
     </div>
 
     <div class="doc_reviews"> <!-- Отзывы о работе врача / Слайдер, галерея --> <!--УТОЧНИТЬ ВИД ОТЗЫВОВ (фото, скрин или текст)-->
@@ -401,6 +372,11 @@
                 <p><a href="tel:+73462533533">+7 (3462) 533-533</a></p>
             </div>  
         </div> <!-- Контактные данные врача, клиники -->
+        <div class="location_info_small">
+            <span>Контакты</span>
+            <p>г. Сургут, ул. Тюменский тракт, 6</p>
+            <p><a href="tel:+73462533533">+7 (3462) 533-533</a></p>
+        </div>
     </div> <!-- УТОЧНИТЬ, НУЖЕН ЛИ САМ БЛОК В ЦЕЛОМ? -->
 </section>  <!-- Детальная карточка врача -->
 

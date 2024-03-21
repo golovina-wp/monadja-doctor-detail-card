@@ -35,6 +35,31 @@
     .doctor_important_info picture {
         text-align: center;
     }
+    .doc_info {
+        width: 100%;
+        max-width: 610px;
+    }
+    .doc_info > h2, 
+    .doctor_section .doc_experience > p, 
+    .doctor_section .dop_services_card p {
+        font-size: 24px;
+    }
+    .doc_info blockquote {
+        margin: 0 0 20px;
+    }
+    .doc_info > p, 
+    .doc_info button, 
+    .doctor_section span.age,  
+    .accor_title, 
+    .location_adress span, .location_phone span,
+    .location_info_small > span {
+        font-size: 18px;
+    }
+    body .doctor_section p, 
+    .doc_info blockquote, 
+    .services_info button {
+        font-size: 16px;
+    }
     .block_img_small .card img {
         height: clamp(110px, 35vw, 220px);
     }
@@ -46,11 +71,66 @@
     .services_card picture {
         margin: 0 auto;
     }
+    .doctor_section .services_info p {
+        font-size: 20px;
+    }
     .services_info > p {
         margin: 0 0 15px;
     }
     .services_info > span {
         /*justify-content: center;*/
+    }
+    .dwslider {
+        height: auto;
+    }
+    .dwslider .slide {
+        min-width: fit-content;
+    }
+    .location_info {
+        display: none;
+    }
+    .location_info_small {
+        display: block;
+        margin-top: 10px;
+    }
+    .location_info_small > span {
+        font-weight: 600;
+    }
+    .location_info_small p {
+        margin: 10px 0;
+    }
+    .location_info_small a {
+        color: #1F3960;
+        text-decoration: none;
+    }
+    .location_info_small a:hover {
+        color: #2E8DD1;
+        transition: .2s;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .slide-box {
+        padding: 20px;
+    }
+    .slide-box .rew_title {
+        gap: 10px;
+    }
+    .slide-box .name {
+        font-size: 22px;
+    }
+    .slide-box .comment {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .slide-box .rew_title {
+        flex-direction: column;
+    }
+    .slide-box .comment {
+        max-width: 200px;
+        width: auto;
     }
 }
 
@@ -107,5 +187,18 @@
     .doctor_important_info img {
         height: auto;
         max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .slider-container {
+        width: clamp(260px, 100%, 600px);
+    }
+    .slide-box {
+        padding: 15px;
+        margin: 0 50px;
+    }
+    .slide-box .rating {
+        flex-direction: column;
     }
 }
