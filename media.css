@@ -25,7 +25,11 @@
         height: clamp(100px, 45vw, 260px);
     }
 }
-
+@media (max-width: 756px) {
+    .dop_services_card {
+        width: clamp(250px, 31dvh, 350px);
+    }
+}
 @media screen and (max-width: 670px) {
     .doctor_important_info {
         display: flex;
